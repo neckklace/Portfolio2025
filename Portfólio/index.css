@@ -1,0 +1,247 @@
+/* Estilo do corpo */
+body {
+    color: #ffffff;
+    background-color: #2a487d;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    overflow-x: hidden;
+}
+
+/* Foto de Capa*/
+.capa{
+    width: 100%;
+    margin-top: 0;
+}
+
+.img-capa{
+    width: 100%;    
+}
+
+/* Esconder o checkbox */
+.menu-toggle {
+    display: none;
+}
+
+/* Botão do menu */
+.menu-button {
+    position: fixed;
+    top: 15px;
+    left: 15px;
+    font-size: 30px;
+    background-color: #1f3b5c;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Esconder o botão quando a navbar está aberta */
+.menu-toggle:checked ~ .menu-button {
+    display: none;
+}
+
+/* Estilizando a barra lateral */
+.sidebar {
+    position: fixed;
+    left: -220px; 
+    top: 0;
+    width: 220px;
+    height: 100%;
+    background-color: #1f3b5c;
+    transition: left 0.3s ease-in-out;
+    box-shadow: 3px 0 10px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+/* Mostrar a navbar quando o checkbox está marcado */
+.menu-toggle:checked ~ .sidebar {
+    left: 0;
+}
+
+/* Fundo invisível que cobre APENAS a área fora da navbar */
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 220px; 
+    width: calc(100vw - 220px);
+    height: 100vh;
+    background: rgba(0, 0, 0, 0); 
+    display: none;
+    
+}
+
+
+.menu-toggle:checked ~ .overlay {
+    display: block;
+}
+
+/*links */
+.sidebar ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.sidebar ul li {
+    display: block;
+}
+
+.sidebar ul li a {
+    display: flex;
+    align-items: center;
+    color: white;
+    text-decoration: none;
+    padding: 15px;
+    font-size: 18px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    transition: background 0.3s, padding-left 0.3s;
+}
+
+/* Ícone no menu */
+.sidebar ul li a::before {
+    content: "▶";
+    margin-right: 10px;
+    transition: transform 0.3s;
+}
+
+
+.sidebar ul li a:hover {
+    background-color: #284b7e;
+    padding-left: 25px;
+}
+
+/* Ajustando os links */
+a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+a:hover {
+    color: #000000;
+}
+
+
+/* Header */
+header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    margin: 20px auto;
+    max-width: 900px;
+}
+
+/* Foto de perfil */
+.Foto img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    object-fit: cover;
+    border: 4px solid #ffffff;
+    transition: transform 0.3s;
+}
+
+.Foto img:hover {
+    transform: scale(1.1);
+}
+
+/* Texto */
+h4 {
+    margin-top: 10px;
+    line-height: 1.8;
+}
+
+/* Seção Portfólios*/
+.antigos {
+    text-align: center;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    max-width: 900px;
+}
+
+.antigos img {
+    display: block;
+    margin: 20px auto;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+.antigos a {
+
+    padding: 10px 15px;
+    background-color: #1f3b5c;
+    color: white;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-size: 18px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.antigos a:hover {
+    background-color: #284b7e;
+    transform: scale(1.05);
+}
+
+/* Seção de currículo */
+.curriculo {
+    text-align: center;
+    margin: 20px auto;
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    max-width: 900px;
+}
+
+.curriculo img {
+    display: block;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+}
+
+.curriculo a {
+    
+    padding: 10px 15px;
+    background-color: #1f3b5c;
+    color: white;
+    border-radius: 5px;
+    margin-top: 15px;
+    font-size: 18px;
+    transition: background 0.3s, transform 0.2s;
+}
+
+.curriculo a:hover {
+    background-color: #284b7e;
+    transform: scale(1.05);
+}
+
+/* Estilizando rodapé */
+
+footer img {
+    height: 100px;
+    width: 100px;
+}
+
+footer{
+    justify-content: center;
+    display: flex;
+}
+
+footer a {
+    text-align: center;
+    margin: auto;
+}
+
